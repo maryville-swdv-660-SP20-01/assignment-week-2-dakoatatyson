@@ -87,4 +87,4 @@ class GameApiViewTests( TestCase ):
             mock_get.return_value = self.mock_game
 
             response = game_solution( self.mock_get_request, 25 )
-            self.assertEqual( response.data, { "solution": "batman"} )
+            self.assertEqual( response.data, self.expected_solution_word )
